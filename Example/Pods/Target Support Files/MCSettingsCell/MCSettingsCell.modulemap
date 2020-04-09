@@ -1,0 +1,6 @@
+framework module MCSettingsCell {
+  umbrella header "MCSettingsCell-umbrella.h"
+
+  export *
+  module * { export * }
+}

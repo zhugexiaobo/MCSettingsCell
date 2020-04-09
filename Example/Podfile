@@ -8,6 +8,6 @@ target 'MCSettingsCell_Example' do
   target 'MCSettingsCell_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase'
+#    pod 'FBSnapshotTestCase'
   end
 end

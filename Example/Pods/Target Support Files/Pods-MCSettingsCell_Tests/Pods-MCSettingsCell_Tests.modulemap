@@ -1,0 +1,6 @@
+framework module Pods_MCSettingsCell_Tests {
+  umbrella header "Pods-MCSettingsCell_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
