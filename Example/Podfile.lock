@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MCSettingsCell: 6aee6f6eeb49e377be67fb3ff7dc0f2a8ca7d6fa
+  MCSettingsCell: 6c8f585269eaff75e21f760079c0fdd81d8803e0
 
 PODFILE CHECKSUM: 8610a40c97fb324f83cea2839d3e2e7bbb331550
 

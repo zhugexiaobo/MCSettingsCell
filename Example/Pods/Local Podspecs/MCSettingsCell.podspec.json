@@ -17,5 +17,10 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "MCSettingsCell/Classes/**/*"
+  "source_files": "MCSettingsCell/Classes/**/*",
+  "resource_bundles": {
+    "MCSettingsCell": [
+      "MCSettingsCell/Assets/Media.xcassets"
+    ]
+  }
 }

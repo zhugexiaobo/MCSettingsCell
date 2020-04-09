@@ -125,6 +125,7 @@
         }
         _subTitleLeb.attributedText = _item.subtitle;
         _subTitleLeb.y = _titleLeb.h + 6.0;
+        [_subTitleLeb sizeToFit];
 
         if (!_customContentV) {
             _customContentV = [UIView new];
@@ -171,7 +172,9 @@
     if (_item.accessoryControl) {
         self.accessoryView = _item.accessoryControl;
     } else if (item.accessoryType == UITableViewCellAccessoryDisclosureIndicator) {
-        UIImageView *arrow = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"moreArrow"]];
+        UIImage *img = [UIImage imageNamed:@"mc_arrow" inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:self.class].resourcePath stringByAppendingPathComponent:@"MCSettingsCell.bundle"]]
+        compatibleWithTraitCollection:nil];
+        UIImageView *arrow = [[UIImageView alloc] initWithImage:img];
         [arrow sizeToFit];
         self.accessoryView = arrow;
     }
@@ -266,7 +269,9 @@
 }
 
 - (void)hintBtnClick:(UIButton *)btn {
-    _item.hintBtnClicked();
+    if (_item.hintBtnClicked) {
+        _item.hintBtnClicked();
+    }
 }
 
 @end
