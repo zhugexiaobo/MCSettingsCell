@@ -27,9 +27,10 @@
 
 - (void)setupDataSource {
     MCSettingsItem *item1 = [[MCSettingsItem alloc] initWithTitle:@"Style 1" detail:nil];
-    UIImageView *aImage = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 42, 42)];
-    aImage.image = [UIImage systemImageNamed:@"music.note"];
-    item1.leftImageView = aImage;
+    if (@available(iOS 13.0, *)) {
+        UIImageView *aImage = [[UIImageView alloc] initWithImage:[UIImage systemImageNamed:@"music.note"]];
+        item1.leftImageView = aImage;
+    }
     
     MCSettingsItem *item2 = [[MCSettingsItem alloc] initWithTitle:@"style 2" detail:@"detail"];
     item2.settingItemClicked = ^(MCSettingsItem * _Nonnull item) {
@@ -43,7 +44,9 @@
     };
     
     MCSettingsItem *item4 = [[MCSettingsItem alloc] initWithTitle:@"Style 4" detail:nil];
-    item4.rightIconView = [[UIImageView alloc] initWithImage:[UIImage systemImageNamed:@"ellipses.bubble"]];
+    if (@available(iOS 13.0, *)) {
+        item4.rightIconView = [[UIImageView alloc] initWithImage:[UIImage systemImageNamed:@"ellipses.bubble"]];
+    }
     item4.settingItemClicked = ^(MCSettingsItem * _Nonnull item) {
         
     };
